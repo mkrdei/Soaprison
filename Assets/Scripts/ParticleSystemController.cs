@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ParticleSystemController : MonoBehaviour
 {
-    private PlayerScaling playerScaling;
+    private PlayerColliderCheck playerScaling;
     private ParticleSystem particleSystem;
     // Start is called before the first frame update
     void Start()
     {
-        playerScaling = GetComponent<PlayerScaling>();
+        playerScaling = GetComponent<PlayerColliderCheck>();
         particleSystem = GetComponent<ParticleSystem>();
         particleSystem.Stop();
     }

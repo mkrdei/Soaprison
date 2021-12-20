@@ -12,8 +12,12 @@ public class UIClickableElements : MonoBehaviour, IPointerEnterHandler, IPointer
     // Start is called before the first frame update
     void Start()
     {
-        soapTopViewRect = soapTopView.GetComponent<RectTransform>();
-        rect = GetComponent<RectTransform>();
+        if (soapTopView != null)
+        {
+            soapTopViewRect = soapTopView.GetComponent<RectTransform>();
+            rect = GetComponent<RectTransform>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -24,16 +28,22 @@ public class UIClickableElements : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("The cursor entered the selectable UI element.");
-        soapTopViewRect.position = rect.position;
+        if (soapTopView != null)
+            soapTopViewRect.position = rect.position;
         
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (transform.name == "Exit")
+        {
+            Application.Quit();
+        }
         if (eventData.pointerPress)
         {
             Debug.Log("Pressed");
             SceneManager.LoadScene(sceneName);
         }
+        
     }
 }

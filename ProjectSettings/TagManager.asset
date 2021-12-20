@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - RoomEnterance
+  - PassArea
   layers:
   - Default
   - TransparentFX

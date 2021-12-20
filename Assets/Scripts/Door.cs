@@ -24,6 +24,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If doors open without solving puzzles or buttons, check array length from the editor. If there are no buttons button array length should be zero, same for the puzzles.
         if(buttons.Length>0)
         {
             numberOfButtonsPressed = 0;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerColliderController : MonoBehaviour
+public class PlayerColliderCheck : MonoBehaviour
 {
     public bool wet;
     SurfaceDetection[] surfaceDetections;
@@ -23,7 +23,7 @@ public class PlayerColliderController : MonoBehaviour
         YSurface = surfaceDetections[1].surfaceName;
         ZSurface = surfaceDetections[2].surfaceName;
         Debug.Log("XSurface: " + XSurface + "    YSurface: " + YSurface + " ZSurface: " + ZSurface);
-        if (transform.localScale.x * transform.localScale.y * transform.localScale.z > 0) { 
+        if (transform.localScale.x * transform.localScale.y * transform.localScale.z > 0f) { 
             if (XSurface != "")
             {
                 transform.localScale = new Vector3(transform.localScale.x - reduceAmount * Time.deltaTime, transform.localScale.y, transform.localScale.z);
@@ -43,7 +43,7 @@ public class PlayerColliderController : MonoBehaviour
         }
         else
         {
-            Destroy(transform.gameObject);
+            GetComponent<PlayerStats>().alive = false;
         }
 
     }
@@ -51,6 +51,8 @@ public class PlayerColliderController : MonoBehaviour
     {
         if(other.tag == "Water")
             wet = true;
+        if (other.tag == "PassArea")
+            GameObject.Find("Game Controller").GetComponent<GameController>().levelPassed = true;
     }
     private void OnTriggerExit(Collider other)
     {
