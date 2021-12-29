@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Main Menu") && SceneManager.GetActiveScene().buildIndex != SceneManager.GetSceneByName("Main Menu").buildIndex)
+        if (Input.GetButtonDown("Main Menu") && SceneManager.GetActiveScene().buildIndex != SceneManager.GetSceneByName("Main Menu").buildIndex && !Application.isEditor)
         {
             SceneManager.LoadScene("Main Menu");
         }

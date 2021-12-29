@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soapTopView: {fileID: 2115838695}
-  sceneName: 
+  sceneName: Settings
 --- !u!1 &2041610598
 GameObject:
   m_ObjectHideFlags: 0
