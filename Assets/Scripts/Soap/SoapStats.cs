@@ -6,9 +6,11 @@ public class SoapStats : MonoBehaviour
 {
     public bool alive = true;
     public bool wet = false;
+    int[] levelIndexes;
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -18,11 +20,13 @@ public class SoapStats : MonoBehaviour
         if (!alive)
         {
             if(transform.tag=="Player")
-                SceneManager.LoadScene("Levels");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             else
             {
                 Destroy(transform.gameObject);
             }
         }
     }
+
+       
 }

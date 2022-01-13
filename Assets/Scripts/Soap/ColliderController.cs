@@ -23,7 +23,7 @@ public class ColliderController : MonoBehaviour
         XSurface = surfaceDetections[0].surfaceName;
         YSurface = surfaceDetections[1].surfaceName;
         ZSurface = surfaceDetections[2].surfaceName;
-        Debug.Log("XSurface: " + XSurface + "    YSurface: " + YSurface + " ZSurface: " + ZSurface);
+        Debug.Log("Water touched surface XSurface: " + XSurface + "    YSurface: " + YSurface + " ZSurface: " + ZSurface);
         if (transform.localScale.x * transform.localScale.y * transform.localScale.z > 0f) { 
             if (XSurface != "")
             {

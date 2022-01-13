@@ -38,7 +38,25 @@ public class GameController : MonoBehaviour
         if (levelPassed)
         {
             levelPassed = false;
-            SceneManager.LoadScene("Levels");
+
+            /*
+            string path = "Assets/Scenes/Levels/";
+            string nextSceneName = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).Substring(path.Length).Replace(".unity", "");
+            Debug.Log(nextSceneName);
+            */
+            // Check if scene is valid.
+            string nextScenePath = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
+            bool isNextSceneValid = nextScenePath.Length > 0 ? true : false;
+            if (isNextSceneValid)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                
+            }
+            else
+            {
+                SceneManager.LoadScene("Main Menu");
+            }
+            
         }
     }
     

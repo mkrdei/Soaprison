@@ -6,12 +6,18 @@ public class InteractiveLight : MonoBehaviour
 {
     private Light _light;
     [SerializeField]
-    private Color defaultColor;
+    private Color defaultColor = MyColors.Lights.soapPink;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        
         _light = GetComponent<Light>();
+        defaultColor.a = 100;
         _light.color = defaultColor;
+        
+    }
+    private void Start()
+    {
     }
 
     // Update is called once per frame
@@ -31,9 +37,6 @@ public class InteractiveLight : MonoBehaviour
         {
             yield return new WaitForSeconds(time);
             _light.color = defaultColor;
-        }
-            
-        
-        // Code to execute after the delay
+        }  
     }
 }

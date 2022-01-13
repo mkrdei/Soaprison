@@ -34,7 +34,6 @@ public class PipeController : MonoBehaviour
         water = transform.GetChild(0).gameObject;
         initialScale = water.transform.localScale;
         initialPos = water.transform.localPosition;
-        Debug.Log(pipeToWaterVectorTransform);
     }
 
     // Update is called once per frame

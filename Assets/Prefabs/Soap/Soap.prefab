@@ -4827,9 +4827,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 0}
-  horizontalSpeed: 15
+  horizontalSpeed: 20
   jumpSpeed: 3
-  maxAngularVelocity: 15
+  maxAngularVelocity: 20
 --- !u!114 &3009459402093257957
 MonoBehaviour:
   m_ObjectHideFlags: 0

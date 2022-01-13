@@ -43,7 +43,6 @@ public class MovingPlatform : MonoBehaviour
         if (relatedPuzzle != null)
             if (puzzlePressOrder.solved)
             {
-                Debug.Log("Why");
                 MovePlatformToFinalPosition();
             }
             else
