@@ -22,3 +22,10 @@ Main Menu: "Esc"
 # Assets
 
 Shaders: https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-urp-191449
+
+# Installation
+
+- Download the project.
+- Open with Unity.
+- Build the project.
+- Execute the build.
