@@ -1,6 +1,5 @@
 # Soaprison
 
-# Gameplay video and screenshots
 ![image](https://user-images.githubusercontent.com/24762808/191365128-ec289ed5-3ac2-45c8-a466-c6d7773f04d4.png)
 ![image](https://user-images.githubusercontent.com/24762808/191364944-fe7d066f-f2dc-4518-9de3-459eefb07aed.png)
 ![image](https://user-images.githubusercontent.com/24762808/191365034-56f3efcf-ceab-4e53-83ed-3ef42301ea72.png)
