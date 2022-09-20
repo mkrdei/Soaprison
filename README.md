@@ -30,3 +30,5 @@ Shaders: https://assetstore.unity.com/packages/2d/textures-materials/water/simpl
 - Open with Unity.
 - Build the project.
 - Execute the build.
+
+or download the executable from https://mkrdei.itch.io/soaprison
